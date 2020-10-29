@@ -6,30 +6,32 @@
     <title>Survey Form Template</title>
     <!-- custom link -->
     <link rel="stylesheet" href="style.css">
+    <!-- AOS cdn -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <header>
+    <header data-aos="fade-up">
         <h1 id="title" class="txt">Form to survey about you</h1>
         <p id="description" class="txt">Thnk you for taking the time to let us know about yuou</p>
     </header>
     <div class="form mx-auto">
-        <form action="#" class="survey-form" id="survey-form" method="POST">
-            <div class="field-txt">
+        <form action="#" class="survey-form" id="survey-form" method="POST" >
+            <div class="field-txt" data-aos="fade-up">
                 <label for="first name" class="txt" id="name-label">First Name</label>
                 <input type="text" placeholder="First name" id="name">
             </div>
-            <div class="field-txt">
+            <div class="field-txt" data-aos="fade-up">
                 <Label for="email" class="txt" id="email-label">E-mail</Label>
                 <input type="email" placeholder="type your email" id="email">
             </div>
-            <div class="field-txt">
+            <div class="field-txt" data-aos="fade-up">
                 <label for="age" class="txt" id="number-label">Age(<small class="txt">optional</small>)</label>
                 <input type="number" placeholder="Age" id="number"  min="16" max="30">
             </div>
-            <div class="field">
-                <label for="current-role" class="txt">Which option best describes your current role?</label>
-                <select name="role" id="dropdown"aria-placeholder="Select current role">
-                    <option value="" disabled selected>Select currnt role</option>
+            <div class="field-drop" data-aos="fade-up">
+                <label for="current-role" class="txt">Which option best describes your current role?</label> <br>
+                <select name="role" id="dropdown" aria-placeholder="Select current role">
+                    <option value="" disabled selected>Select currnt role</option> 
                     <option value="" class="txt">Student</option>
                     <option value="" class="txt">Full time job</option>
                     <option value="" class="txt">Full time learner</option>
@@ -37,61 +39,70 @@
                     <option value="" class="txt">Other</option>
                 </select>
             </div>
-            <div class="field">
+            <div class="field-radio" data-aos="fade-up">
                 <p class="txt">Would you recommend freeCodeCamp to a friend?</p>
 
                 <input type="radio" name="recommend" value="recommend">
-                <label for="recommendation" class="txt">Definitely</label>
+                <label for="recommendation" class="txt">Definitely</label> <br>
                 <input type="radio" name="recommend" value="maybe">
-                <label for="maybe recommend" class="txt">Maybe</label>
+                <label for="maybe recommend" class="txt">Maybe</label> <br>
                 <input type="radio" name="recommend" value="not-sure">
-                <label for="not-sure" class="txt">Not sure</label>                
+                <label for="not-sure" class="txt">Not sure</label> <br>      
             </div>
-            <div class="field">
+            <div class="field-drop" data-aos="fade-up">
                 <p class="txt"> What is your favorite feature of freeCodeCamp? </p>
                 
-                <select name="Select an option" id="dropdown" class="txt"> What is your favorite feature of freeCodeCamp?
-                    <option value="" disabled selected class="txt">Select an option</option>
-                    <option value="" class="txt">Challenges</option>
-                    <option value="" class="txt">Projects</option>
-                    <option value="" class="txt">Community</option>
-                    <option value="" class="txt">Open source</option>
+                <select name="Select-an-option" id="dropdown">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="" class="">Challenges</option>
+                    <option value="" class="">Projects</option>
+                    <option value="" class="">Community</option>
+                    <option value="" class="">Open source</option>
                 </select>
             </div>
-            <div class="field">
+            <div class="field-check" data-aos="fade-up">
                 <p class="txt">What would you like to see improved? <small class="txt">(Check all that apply)</small></p>
 
                 <input type="checkbox" name="recommend" value="front-end">
-                <label for="front-end" class="txt">Front-end Projects</label>
+                <label for="front-end" class="txt">Front-end Projects</label> <br>
                 <input type="checkbox" name="recommend" value="back-end">
-                <label for="backend" class="txt">Back-end Projects</label>
+                <label for="backend" class="txt">Back-end Projects</label> <br>
                 <input type="checkbox" name="recommend" value="visualization">
-                <label for="visualization" class="txt">Data Visualization</label>
+                <label for="visualization" class="txt">Data Visualization</label> <br>
                 <input type="checkbox" name="recommend" value="challenges">
-                <label for="challenges" class="txt">Challenges</label>
+                <label for="challenges" class="txt">Challenges</label> <br>
                 <input type="checkbox" name="recommend" value="open-source">
-                <label for="open-source" class="txt">Open Source Community</label>
+                <label for="open-source" class="txt">Open Source Community</label> <br>
                 <input type="checkbox" name="recommend" value="gitter">
-                <label for="gitter" class="txt">Gitter help rooms</label>
+                <label for="gitter" class="txt">Gitter help rooms</label> <br>
                 <input type="checkbox" name="recommend" value="videos">
-                <label for="videos" class="txt">Videos</label>
+                <label for="videos" class="txt">Videos</label> <br>
                 <input type="checkbox" name="recommend" value="meetups">
-                <label for="city-meetups" class="txt">City Meetups</label>
+                <label for="city-meetups" class="txt">City Meetups</label> <br>
                 <input type="checkbox" name="recommend" value="wiki">
-                <label for="wiki" class="txt">Wiki</label>
+                <label for="wiki" class="txt">Wiki</label> <br>
                 <input type="checkbox" name="recommend" value="forum">
-                <label for="forum" class="txt">Forum</label>
+                <label for="forum" class="txt">Forum</label> <br>
                 <input type="checkbox" name="recommend" value="additional">
-                <label for="additional" class="txt">Additional Courses</label>
+                <label for="additional" class="txt">Additional Courses</label> <br>
             </div>
-            <div class="field-txt">
-                <p class="txt">Any comments or suggestions?</p>
+            <div class="field-txt" data-aos="fade-up">
+                <p class="txt comment">Any comments or suggestions?</p>
                 <textarea name="suggestion" id="suggestion" cols="30" rows="10" 
-                placeholder="Enter your comment here">
+                placeholder="Provide your comment here....">
                 </textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" class="submit" >Submit</button>
         </form>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 50,
+        duration: 1000,
+        easing: 'ease-in-out', 
+      });
+    </script>
 </body>
 </html>
